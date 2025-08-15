@@ -2,8 +2,10 @@ import sqlite3
 
 def add_passwords(site ,passwords):
     
-    # Step 1: Connect to the database
+    # connect to the database (creates it if it doesn't exist)
     conn = sqlite3.connect("passwords.db")
+
+    # create a cursor to run SQL commands
     cursor = conn.cursor()
     
     # Step 2: Insert or replace the password
