@@ -7,7 +7,7 @@ def password_manager():
     
     while True:
         
-        requirement = input("Please type add or require: ").lower()
+        requirement = input("Please type add, require or quit: ").lower()
         
         if requirement == "add":
             
