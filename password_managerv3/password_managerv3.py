@@ -1,6 +1,6 @@
 import sqlite3
 
-def add_passwords(site ,passwords):
+def add_passwords(site ,password):
     
     # connect to the database (creates it if it doesn't exist)
     conn = sqlite3.connect("passwords.db")
