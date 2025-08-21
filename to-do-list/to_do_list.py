@@ -1,6 +1,6 @@
 import sqlite3
 
-def add_task(task, due_Date, status):
+def add_task(task, due_Date, status, quit):
 
     conn = sqlite3.connect("to_do_list.db")
 
@@ -68,7 +68,7 @@ def update_remove_task():
     conn.close()
 
 
-action = input("Do you want to add, view, update, or delete a task? ").lower()
+action = input("Do you want to add, view, update, delete or quit a task? ").lower()
 
 if action == "add":
     task = input("Enter task name: ")
@@ -79,6 +79,9 @@ if action == "add":
 elif action == "view":
     task = input("Which task do you want to see? ")
     task_status(task)
+
+elif action == "quit":
+    print("Goodbye")
 
 elif action in ["update", "delete"]:
     update_remove_task()
